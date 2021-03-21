@@ -24,10 +24,10 @@
             <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
               <li>
-                <a><%= link_to 'Home', root_path, class: "fas fa-home nav-link text-light" %></a>
+                <a><%= link_to 'Home', user_path(current_user.id), class: "fas fa-home nav-link text-light" %></a>
               </li>
               <li>
-                <a class="fas fa-users nav-link text-light">User</a>
+                <a><%= link_to 'User', books_path(current_user.id), class: "fas fa-users nav-link text-light" %></a>
               </li>
               <li>
                 <a class="fas fa-book-open nav-link text-light">Books</a>
