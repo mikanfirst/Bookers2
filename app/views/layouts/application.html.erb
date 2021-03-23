@@ -24,13 +24,13 @@
             <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
               <li>
-                <a><%= link_to 'Home', books_path(current_user.id), class: "fas fa-home nav-link text-light" %></a>
+                <a><%= link_to 'Home', user_path(current_user.id), class: "fas fa-home nav-link text-light" %></a>
               </li>
               <li>
-                <a><%= link_to 'User', books_path(current_user.id), class: "fas fa-users nav-link text-light" %></a>
+                <a><%= link_to 'Users', users_path, class: "fas fa-users nav-link text-light" %></a>
               </li>
               <li>
-                <a class="fas fa-book-open nav-link text-light">Books</a>
+                <a><%= link_to 'Books', books_path, class: "fas fa-users nav-link text-light" %></a>
               </li>
               <li>
                 <a><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "fas fa-sign-out-alt nav-link text-light" %></a>
