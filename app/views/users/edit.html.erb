@@ -1,0 +1,27 @@
+<div class="container">
+  <divc class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-5 mx-auto">
+      <h1>User info</h1>
+      <%= form_with model: @user, local:true do |f| %>
+        <div class="form-group">
+          <label>Name</label>
+          <%= f.text_field :name %>
+        </div>
+
+        <div class="form-group">
+          <label>Image</label>
+          <%= f.attachment_field :profile_image, placeholder: "ファイルを選択" %>
+        </div>
+
+        <div class="form-group">
+          <label>Introduction</label>
+          <%= f.text_area :introduction %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit :Update_User, class: "btn btn-secondary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
