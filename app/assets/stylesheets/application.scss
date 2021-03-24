@@ -24,6 +24,21 @@
   box-sizing: border-box;
 }
 
+.notification {
+  .notice {
+    background-color: #ffffff;
+    color: #006400;
+  }
+  .alert {
+    background-color: #ffffff;
+    color: #ff0000;
+  }
+  .success {
+    background-color: #ffffff;
+    color: #006400;
+  }
+}
+
 label {
   display: block;
 }
