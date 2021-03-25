@@ -1,17 +1,16 @@
 <div class="container px-5 px-sm-0">
   <% if @newbook.errors.any? %>
-    <div class="error">
-      <h2><%= @newbook.errors.count %>errors prohibited this obj from being saved:</h2>
-      <% @newbook.errors.full_messages.each do |message| %>
-        <ul>
-          <%= message %>
-        </ul>
-      <% end %>
+  <div class="error">
+    <h2><%= @newbook.errors.count %>errors prohibited this obj from being saved:</h2>
+    <% @newbook.errors.full_messages.each do |message| %>
+      <ul>
+        <%= message %>
+      </ul>
+    <% end %>
+  </div>
   <% end %>
-    </div>
   <div class="row">
   <%= render 'books/info' %>
-
     <div class="col-md-8 offset-md-1">
       <h2>Books</h2>
       <table class="table table-hover">
